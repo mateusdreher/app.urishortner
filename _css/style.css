@@ -1,0 +1,151 @@
+* {
+    font-family: 'Balsamiq Sans', cursive;
+}
+body {
+    background: #B2DCFF;
+}
+header {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin-left: 5%;
+    height: 100px;
+}
+header > img {
+    height: 100%;
+}
+.container, body {
+    height: 100%;
+}
+.text-intro {
+    float: left;
+    width: 80%; 
+    height: auto;
+    margin-top: 3%;
+    margin-left: 10%;
+    box-shadow: 0 .5rem 1rem grey !important;
+    background: #f4f4f3;
+    padding: 1%;
+    border-radius: 10px;
+    color: #4D4B4B;
+    line-height: 25px;
+}
+.result {
+    z-index: 3;
+    position: fixed;
+    display: none;
+    justify-content: center;
+    top: 40%;
+    left: 5%;
+    width: 90%;
+    padding: 2%;
+    background: white;
+    box-shadow: 0 .5rem 1rem grey !important;
+    border-radius: 10px;
+}
+.link-result {
+    width: auto;
+    float: left;
+    border: none;
+    font-size: large;
+}
+.fa-copy {
+    margin-left: 1%;
+    float: left;
+}
+.giphy-link-ready {
+    background: url("../images/link.gif") center center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 70%;
+}
+.p-link {
+    font-size: large;
+    width: 100%;
+    text-align: center;
+}
+.link-ready {
+    z-index: 2;
+    display: none;
+    box-shadow: 0 .5rem 1rem grey !important;
+    border-radius: 10px;
+    background: #c3e4e8;
+    width: 30%;
+    height: 30%;
+    float: left;
+    position: fixed;
+    top: 30%;
+    left: 35%;
+}
+.fa-times {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+}
+.question {
+    font-size: x-large;
+    color: #5397cd;
+    margin-bottom: 3%;
+}
+.answer {
+    font-size: medium;
+}
+.giphy-link-ready:hover, .fa-copy:hover{
+    cursor: pointer;
+}
+.fa-times:hover {
+    cursor: pointer;
+    color: red;
+}
+.detach {
+    color: #8e35d0;
+}
+.container-dark {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 99.8%;
+    height: 200vh;
+    background-color: #B2AFAF;
+    opacity: 0.9;
+}
+.examples1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 850px;
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+.img-example{
+    float: left;
+}
+.face-1 {
+    width: 533px;
+    height: 838px;
+}
+.face-2 {
+    width: 533px;
+    height: 828px;
+}
+.whats-1 {
+    width: 448px;
+    height: 348px;
+}
+.whats-2 {
+    width: 443px;
+    height: 262px;
+}
+.examples2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    height: 450px;
+    margin-left: 5%;
+    margin-bottom: 10%;
+}

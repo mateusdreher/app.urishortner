@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <meta charset="utf8" >
+        <title>URI Shortner</title>
+        <link href="_css/style.css" rel="stylesheet">
+        <link href="_css/form.css" rel="stylesheet">
+        <link href="_css/loader.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet" >
+    </head>
+
+    <body>
+        <header>
+            <img src="./images/header-logo.png" alt="Logo">
+        </header>
+        <div class="container-dark"></div>
+        <div class="container">
+            <div class="text-intro">
+                <p class="question">O que é um encurtador de URL ?</p>
+                <p class="answer">
+                    O principal objetivo de um encurtador de URL é tornar um link menor do que ele é
+                    originalmente.
+                </p>
+                <p class="question">Por que encurtar sua URL ? </p>
+                <p class="answer"> 
+                    Quando uma URL é encurtada, ela se torna mais apresentável 
+                    e agradável de se ler. Ou seja, o link não "briga" com o conteúdo do local em que
+                    está inserido. 
+                </p>
+                <p class="answer">
+                    Por exemplo : Considere o link abaixo : <br> 
+                    <span class="detach">https://link-grande-muito-longo-mesmo.com.br/mais-coisa?denovo</span>
+                    <br> Um tanto quanto longo não é mesmo? e nada amigável ao seu post.
+                    <br>Agora imagine ele assim : 
+                    <span class="detach">https://sturi.com/link-curto</span> 
+                    <br><br> Melhor não é? Fica mais amigável ao olhar de quem está lendo, melhor para enviar
+                    o link para seus amigos e familiares.
+                    <br><br>Ah, e é totalmente grátis! Gostou? Então experimente.
+                    <button id="btn-encurtar">
+                        Legal, quero encurtar meu link
+                        <i class="far fa-laugh fa-2x" id="icon-smile"></i>
+                    </button>
+                </p>
+                <br>
+                <p class="answer" style="text-align: center;"> 
+                    Ainda não está convencido? Veja Exemplos práticos abaixo. <br><br>
+                    <b>OBS: </b> Todos os prints abaixo são de perfis e com links fakes, <br>
+                    criados apenas para demonstração nesse site.  
+                </p>
+                <div class="buttons">
+                    <button id="btn-examples">
+                        Me mostre
+                        <i class="fas fa-arrow-down fa-2x"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <form id="form">
+                <i class="fas fa-times close_form"></i>
+                <label for="link" class="label">Link para encurtar</label>
+                <input type="text" class="input" id="link" name="link">
+                <div class="buttons">
+                    <button type="button" id="btn-shorten">
+                        Encurtar
+                        <i class="fas fa-cut fa-2x"></i>
+                    </button>
+                    <span class="clue">Ou aperte Enter</span>
+                </div>
+                <div class="container-loader">
+                    <div class="loader"></div>
+                </div>
+            </form>
+
+            <div class="link-ready">
+                <p class="p-link">Your link is ready</p>
+                <div class="giphy-link-ready"></div>
+            </div>
+            <div class="result">
+                <i class="fas fa-times close_result"></i>
+                <input class="link-result" value="" readonly>
+                <i class="far fa-copy"></i>
+            </div>
+
+        </div>
+
+        <div class="examples1">
+            <img 
+                src="./images/postFaceLinkGrande.png" 
+                alt="Post sem encurtar url" 
+                class="img-example face-1">
+            <img 
+                src="./images/postFaceLinkShort.png" 
+                alt="Post com url encurtada" 
+                class="img-example face-2">
+        </div>
+        <div class="examples2">
+            <img 
+                src="./images/whatsLinkGrande.png" 
+                alt="Mensagem sem encurtar url" 
+                class="img-example whats-1">
+            <img 
+                src="./images/whatsLinkShort.png" 
+                alt="Mensagem com url encurtada" 
+                class="img-example whats-2">
+        </div>
+        
+
+
+        <script src="js/script.js"></script>
+        <script src="js/provider.js"></script>
+        <script src="./conf.json"></script>
+        <script src="https://kit.fontawesome.com/53b287fba0.js" crossorigin="anonymous"></script>
+    </body>
+</html>
