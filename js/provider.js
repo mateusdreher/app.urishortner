@@ -1,5 +1,5 @@
 const xhr = new XMLHttpRequest();
-const path = "http://localhost:3030/Ddev/api/url_shortner";
+const path = "https://mdreher4api.herokuapp.com/mddev/api/url_shortner";
 
 function request(method, endpoint, body){
     let url = `${path}/${endpoint}`;
