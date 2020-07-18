@@ -8,8 +8,12 @@ function request(method, endpoint, body){
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
-            if (xhr.status = 200)
+            if (xhr.status = 200){
                 dealWithReturn((JSON.parse(xhr.responseText)), method, endpoint);
+            }
+            else { 
+                console.error(xhr.responseText);
+            }
         }
     }
     xhr.send(body);

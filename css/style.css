@@ -117,43 +117,42 @@ header > img {
     background-color: #B2AFAF;
     opacity: 0.9;
 }
-.examples1 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
-    height: 850px;
-    margin-top: 20%;
-    margin-left: 5%;
-    margin-bottom: 2%;
-}
-.img-example{
+.card {
+    margin-left: 10%;
+    background: #CCC8C8;
     float: left;
+    width: 35%;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.1);
+} 
+.card-container {
+    padding: 2px 16px;
 }
-.face-1 {
-    width: 533px;
-    height: 838px;
+.cardf {
+    margin-top: 30%;
 }
-.face-2 {
-    width: 533px;
-    height: 828px;
-}
-.whats-1 {
-    width: 448px;
-    height: 348px;
-}
-.whats-2 {
-    width: 443px;
-    height: 262px;
-}
-.examples2 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
-    height: 450px;
-    margin-left: 5%;
+.cardw {
+    height: 60%;
+    margin-top: 10%;
     margin-bottom: 10%;
+}
+.card > img {
+    width: 100%;
+}
+.card-title{
+    color: #8e35d0;
+}
+.card-img1 {
+    height: 85%;
+}
+.card-img2 {
+    height: 75%;
 }
 footer {
     display: flex;

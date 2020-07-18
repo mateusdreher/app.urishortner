@@ -1,7 +1,7 @@
 var div_result = document.getElementsByClassName("result")[0];
 var div_link_ready = document.getElementsByClassName("link-ready")[0];
 var div_container_dark = document.getElementsByClassName("container-dark")[0];
-var div_examples = document.getElementsByClassName("examples1")[0];
+var div_examples = document.getElementsByClassName("cardf")[0];
 
 var btn_shorten = document.getElementById("btn-shorten");
 var btn_link_ready = document.getElementsByClassName("giphy-link-ready")[0];
@@ -58,7 +58,7 @@ window.onload = function() {
     btn_examples.addEventListener("click", function(){
         var coord = div_examples.getBoundingClientRect();
         console.log(coord);
-        window.scrollTo({left: coord.x, top : (coord.y + 290),  behavior: 'smooth'});
+        window.scrollTo({left: coord.x, top : (coord.y + 380),  behavior: 'smooth'});
     });
 
 
@@ -67,8 +67,7 @@ window.onload = function() {
 function dealWithReturn(data, method, endpoint){
     loading.style.display = "none";
     //create new link
-    if (method == "POST" && endpoint == "new"){
-        console.log(data.link);
+    if (method == "POST" && endpoint == "add"){
         input_text_result.value = data.link;
         showGifLinkReady();
     }
@@ -129,6 +128,6 @@ function addNewLinkProvider(){
     let body = {
         url: getLinkToShorten()
     }
-    return request("POST", "new", JSON.stringify(body));
+    return request("POST", "add", JSON.stringify(body));
 }
 
