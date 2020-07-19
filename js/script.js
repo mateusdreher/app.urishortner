@@ -19,8 +19,22 @@ var form = document.getElementById("form");
 var loading = document.getElementsByClassName("loader")[0];
 
 var linkS = "";
+var hash = "";
+
+if (document.readyState == "loading") {
+    redirect();
+ }
+ 
+ function redirect() {
+ const urlParams = new URLSearchParams(window.location.search);
+   this.hash = urlParams.get('h');
+ }
 
 window.onload = function() {
+
+    if (this.hash != null) {
+        redirectTo();
+    }
 
     this.linkS = "";
     //Events
@@ -65,12 +79,15 @@ window.onload = function() {
 }
 
 function dealWithReturn(data, method, endpoint){
-    console.log(data);
     loading.style.display = "none";
     //create new link
     if (method == "POST" && endpoint == "add"){
         input_text_result.value = data.data.link;
         showGifLinkReady();
+    }
+
+    if (method == "GET") {
+        window.location.href = data.data[0].original_link;
     }
 }
 
@@ -130,5 +147,8 @@ function addNewLinkProvider(){
         url: getLinkToShorten()
     }
     return request("POST", "add", JSON.stringify(body));
+}
+function redirectTo() {
+    return request('GET', `hash/${this.hash}`);
 }
 
