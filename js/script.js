@@ -65,10 +65,11 @@ window.onload = function() {
 }
 
 function dealWithReturn(data, method, endpoint){
+    console.log(data);
     loading.style.display = "none";
     //create new link
     if (method == "POST" && endpoint == "add"){
-        input_text_result.value = data.link;
+        input_text_result.value = data.data.link;
         showGifLinkReady();
     }
 }
