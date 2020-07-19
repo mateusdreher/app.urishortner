@@ -39,15 +39,18 @@ window.onload = function() {
     this.linkS = "";
     //Events
 
-    this.btn_shorten.addEventListener("click", function(){
-        loading.style.display = "block";
-        hideForm();
-        addNewLinkProvider();
-    });
+    this.btn_shorten.addEventListener("click", shorten);
 
     btn_show_form.addEventListener("click", function() {
         showDark();
         showForm();
+    });
+
+    input_link.addEventListener("keypress", function(event) {
+        if(event.keyCode == 13) {
+            event.preventDefault();
+            shorten();
+        }
     });
 
     this.btn_link_ready.addEventListener("click", this.hideGifLinkReady);
@@ -71,11 +74,26 @@ window.onload = function() {
 
     btn_examples.addEventListener("click", function(){
         var coord = div_examples.getBoundingClientRect();
-        console.log(coord);
         window.scrollTo({left: coord.x, top : (coord.y + 380),  behavior: 'smooth'});
     });
 
 
+}
+
+function shorten() {
+    let value = input_link.value;
+    if (value.substr(0,4) != "http") {
+        alert(`Verifique o link digitado.  
+        \nEle deve estar o formato : 
+        \nhttp://blabla.com ou 
+        \nhttps://blabla.com`);
+    }
+    else {
+        loading.style.display = "block";
+        hideForm();
+        addNewLinkProvider();
+    }
+    
 }
 
 function dealWithReturn(data, method, endpoint){
